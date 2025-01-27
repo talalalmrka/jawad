@@ -1,0 +1,10 @@
+@layer components {
+    pre,
+    .pre,
+    code,
+    .code {
+        @apply relative text-xs font-mono bg-gray-100 rounded-lg dark:bg-gray-700;
+        @apply overflow-auto;
+        direction: ltr;
+    }
+}

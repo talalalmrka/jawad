@@ -1,0 +1,8 @@
+@layer components {
+    .border-default {
+        @apply border-gray-200 dark:border-gray-700;
+    }
+    .divide-default {
+        @apply divide-gray-200 dark:divide-gray-700;
+    }
+}

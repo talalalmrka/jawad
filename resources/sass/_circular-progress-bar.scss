@@ -1,0 +1,104 @@
+@layer components {
+    .circular-progress-bar {
+        @apply relative w-16 h-16 mx-auto text-primary-600 rounded-full;
+
+        .percent {
+            @apply text-xs;
+        }
+
+        &.xs {
+            @apply w-8 h-8;
+
+            .percent {
+                @apply text-xxs;
+            }
+        }
+
+        &.sm {
+            @apply w-12 h-12;
+
+            .percent {
+                font-size: 0.65rem;
+            }
+        }
+
+        &.lg {
+            @apply w-20 h-20;
+
+            .percent {
+                @apply text-base;
+            }
+        }
+
+        &.xl {
+            @apply w-24 h-24;
+
+            .percent {
+                @apply text-lg;
+            }
+        }
+
+        &.xxl {
+            @apply w-28 h-28;
+
+            .percent {
+                @apply text-2xl;
+            }
+        }
+
+        &.primary {
+            @apply text-primary-600;
+        }
+
+        &.secondary {
+            @apply text-secondary-600;
+        }
+
+        &.light {
+            @apply text-white;
+        }
+
+        &.dark {
+            @apply text-dark;
+        }
+
+        &.blue {
+            @apply text-blue-600;
+        }
+
+        &.green {
+            @apply text-green-600;
+        }
+
+        &.red {
+            @apply text-red-600;
+        }
+
+        &.orange {
+            @apply text-orange-600;
+        }
+
+        &.yellow {
+            @apply text-yellow-600;
+        }
+
+        &.purple {
+            @apply text-purple-600;
+        }
+
+        &.violet {
+            @apply text-violet-600;
+        }
+
+        &.cyan {
+            @apply text-cyan-600;
+        }
+
+        //percent hidden
+        &.percent-hidden {
+            .percent {
+                @apply hidden;
+            }
+        }
+    }
+}

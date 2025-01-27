@@ -1,0 +1,24 @@
+@layer components {
+    .text-bg-light {
+        @apply text-dark;
+    }
+    .text-bg-primary,
+    .text-bg-secondary,
+    .text-bg-dark,
+    .text-bg-blue,
+    .text-bg-green,
+    .text-bg-red,
+    .text-bg-purple,
+    .text-bg-violet {
+        @apply text-white;
+    }
+    .text-bg-orange {
+        @apply text-orange-100;
+    }
+    .text-bg-yellow {
+        @apply text-yellow-100;
+    }
+    .text-bg-cyan {
+        @apply text-cyan-100;
+    }
+}

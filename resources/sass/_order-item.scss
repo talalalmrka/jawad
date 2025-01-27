@@ -1,0 +1,22 @@
+@layer components {
+    .order-item {
+        @apply flex items-center space-x-2 rtl:space-x-reverse justify-between;
+        @apply bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 mb-3;
+        @apply p-3 text-gray-700 dark:text-gray-300;
+    }
+    .order-item-title {
+        @apply font-bold;
+    }
+    .order-item-thumbnail {
+        @apply h-24 rounded;
+    }
+    .order-item-content {
+        @apply grow;
+    }
+    .order-item-quantity {
+        @apply input-group w-32;
+    }
+    .order-item-action {
+        @apply text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out dark:text-neutral-200 dark:hover:text-white;
+    }
+}

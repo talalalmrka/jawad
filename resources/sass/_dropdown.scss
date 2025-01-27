@@ -1,0 +1,55 @@
+@layer components {
+    .dropdown {
+        @apply relative;
+    }
+
+    .dropdown-toggle {
+        @apply flex items-center justify-between;
+        cursor: pointer;
+
+        // Add chevron icon
+        &::after {
+            content: "";
+            @apply ml-2 w-2.5 h-2.5;
+            border: solid currentColor;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            transform: rotate(45deg); // Chevron down
+            transition: transform 0.2s ease-in-out;
+        }
+
+        // Rotate chevron when dropdown is open
+        &.show::after {
+            transform: rotate(-135deg); // Chevron up
+        }
+    }
+
+    .dropdown-menu {
+        @apply absolute mt-3 z-full w-full bg-white dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-800 text-sm text-gray-700 dark:text-gray-200;
+        @apply rounded-lg  shadow-xs py-1;
+        @apply w-content;
+        @apply transition-transform -translate-y-5 opacity-0;
+        &:not(.show) {
+            @apply collapse;
+        }
+        &.show {
+            @apply translate-y-0 opacity-100;
+        }
+    }
+
+    .dropdown-item {
+        @apply flex w-full items-center space-x-2 rtl:space-x-reverse transition duration-200;
+        @apply text-sm font-medium text-neutral-500;
+        @apply hover:no-underline hover:text-neutral-700 hover:ease-in-out dark:text-neutral-200 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600;
+        @apply px-2 py-1 md:py-2;
+        //@apply block hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white py-2 px-4;
+        cursor: pointer;
+        span {
+            @apply truncate;
+        }
+
+        /*&.active {
+            @apply bg-primary text-white;
+        }*/
+    }
+}

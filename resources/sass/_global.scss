@@ -1,0 +1,61 @@
+@layer components {
+    html,
+    body {
+        @apply text-gray-500 dark:text-gray-300;
+    }
+    .verified-mark {
+        @apply text-green-700 dark:text-green-500;
+
+        .verified-mark-label,
+        .verified-mark-icon {
+            @apply text-inherit;
+        }
+
+        &.xs {
+            @apply text-xs;
+
+            .verified-mark-icon {
+                @apply w-3 h-3;
+            }
+        }
+
+        &.sm {
+            @apply text-sm;
+
+            .verified-mark-icon {
+                @apply w-3.5 h-3.5;
+            }
+        }
+
+        &.lg {
+            @apply text-base;
+
+            .verified-mark-icon {
+                @apply w-5 h-6;
+            }
+        }
+
+        &.xl {
+            @apply text-lg;
+
+            .verified-mark-icon {
+                @apply w-8 h-8;
+            }
+        }
+
+        &.xxl {
+            @apply text-xl;
+
+            .verified-mark-icon {
+                @apply w-10 h-10;
+            }
+        }
+    }
+
+    .icon-flex {
+        @apply flex items-center space-x-2 rtl:space-x-reverse;
+    }
+    a {
+        //@apply hover:underline text-secondary dark:text-light;
+    }
+}

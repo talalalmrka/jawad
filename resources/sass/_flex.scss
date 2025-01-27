@@ -1,0 +1,38 @@
+@layer components {
+    .flex-space-0\.5 {
+        @apply flex items-center space-x-0.5 rtl:space-x-reverse;
+    }
+    .flex-space-1 {
+        @apply flex items-center space-x-1 rtl:space-x-reverse;
+    }
+    .flex-space-1\.5 {
+        @apply flex items-center space-x-1.5 rtl:space-x-reverse;
+    }
+    .flex-space-2 {
+        @apply flex items-center space-x-2 rtl:space-x-reverse;
+    }
+    .flex-space-3 {
+        @apply flex items-center space-x-3 rtl:space-x-reverse;
+    }
+    .flex-space-4 {
+        @apply flex items-center space-x-4 rtl:space-x-reverse;
+    }
+    .flex-space-5 {
+        @apply flex items-center space-x-5 rtl:space-x-reverse;
+    }
+    .flex-space-6 {
+        @apply flex items-center space-x-6 rtl:space-x-reverse;
+    }
+    .flex-space-7 {
+        @apply flex items-center space-x-7 rtl:space-x-reverse;
+    }
+    .flex-space-8 {
+        @apply flex items-center space-x-8 rtl:space-x-reverse;
+    }
+    .flex-space-9 {
+        @apply flex items-center space-x-9 rtl:space-x-reverse;
+    }
+    .flex-space-10 {
+        @apply flex items-center space-x-10 rtl:space-x-reverse;
+    }
+}

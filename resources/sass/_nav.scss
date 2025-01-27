@@ -1,0 +1,18 @@
+@layer components {
+    .nav {
+        @apply flex space-x-2 md:space-x-3 rtl:space-x-reverse items-center;
+        &.vertical {
+            @apply flex-col space-y-2;
+            .nav-item {
+                @apply w-full;
+            }
+        }
+    }
+    .nav-link {
+        @apply flex items-center space-x-2 rtl:space-x-reverse py-2 text-sm font-medium text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out dark:text-neutral-200 dark:hover:text-white lg:px-2;
+        @apply hover:no-underline;
+        &.active {
+            @apply dark:text-white;
+        }
+    }
+}

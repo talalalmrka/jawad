@@ -1,0 +1,52 @@
+@layer components {
+    .btn-group {
+        @apply flex items-center;
+
+        .btn {
+            @apply rounded-none;
+
+            &:first-child {
+                @apply rounded-s-lg;
+            }
+
+            &:last-child {
+                @apply rounded-e-lg;
+            }
+        }
+
+        &.xs {
+
+            .btn {
+                @apply btn-xs;
+            }
+        }
+
+        &.sm {
+
+            .btn {
+                @apply btn-sm;
+            }
+        }
+
+        &.lg {
+
+            .btn {
+                @apply btn-lg;
+            }
+        }
+
+        &.xl {
+
+            .btn {
+                @apply btn-xl;
+            }
+        }
+
+        &.xxl {
+
+            .btn {
+                @apply btn-xxl;
+            }
+        }
+    }
+}

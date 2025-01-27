@@ -1,0 +1,20 @@
+/*.navbar{
+    .nav-link{
+        font-size: .875rem;
+        color: rgb(115 115 115);
+    }
+}*/
+
+@layer components {
+    .navbar {
+        @apply bg-white dark:bg-gray-800 text-sm font-medium text-neutral-700 dark:text-neutral-200;
+
+        .navbar-nav {
+            @apply flex flex-wrap items-center justify-between mx-auto p-2;
+
+            .nav-item {
+                @apply px-3 flex py-2 space-x-1 rtl:space-x-reverse items-center text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white;
+            }
+        }
+    }
+}

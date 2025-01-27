@@ -1,0 +1,73 @@
+@layer components {
+    .datatable {
+        .thead {
+            @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-900 dark:text-gray-400 border-t border-b dark:border-gray-700;
+        }
+
+        @apply relative;
+
+        .buttons-bar {
+            @apply p-2.5;
+        }
+
+        .search-bar {
+            @apply flex justify-between items-center p-2.5;
+        }
+
+        table {
+            @apply w-full text-sm text-gray-500 dark:text-gray-400 divide-y dark:divide-gray-700;
+
+            &.xs {
+                @apply text-xs;
+            }
+
+            thead,
+            tfoot {
+                @apply text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-900 dark:text-gray-400 dark:border-gray-700;
+
+                th {
+                    @apply text-nowrap;
+                }
+            }
+
+            thead {
+                @apply border-t;
+            }
+
+            tfoot {
+                @apply border-b #{!important};
+            }
+
+            tbody {
+                @apply divide-y dark:divide-gray-700;
+
+                tr {
+                    @apply bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700;
+                }
+            }
+
+            th,
+            td {
+                @apply p-2.5;
+                //@apply border dark:border-gray-700;
+            }
+
+            .action {
+                @apply relative;
+
+                .tooltip {
+                    @apply absolute text-xs rounded-lg hidden;
+                }
+
+                &:hover {
+                    .tooltip {
+                        @apply block;
+                    }
+                }
+            }
+        }
+    }
+    .table-responsive {
+        @apply relative overflow-x-auto;
+    }
+}

@@ -1,0 +1,174 @@
+@layer components {
+    .bg-form-control {
+        @apply bg-gray-100 autofill:bg-gray-50 dark:bg-gray-700;
+    }
+    .border-form-control {
+        @apply border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500;
+    }
+    .ring-form-control {
+        @apply focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-300;
+    }
+    .text-form-control {
+        @apply text-sm text-gray-600 dark:text-gray-300 placeholder-gray-300 dark:placeholder-gray-400;
+    }
+    .p-form-control {
+        @apply p-2.5;
+    }
+    .rounded-form-control {
+        @apply rounded-lg;
+    }
+    .shape-form-control {
+        @apply bg-form-control border-form-control ring-form-control text-form-control p-form-control rounded-form-control;
+    }
+    .form-control-appearance {
+        @apply /*block*/ w-full;
+        @apply bg-form-control border-form-control ring-form-control text-form-control p-form-control rounded-form-control;
+        @apply input-base;
+    }
+    .input-base {
+        @apply p-2.5 text-sm leading-none;
+    }
+    .input-xs {
+        @apply text-xs p-1.5;
+    }
+
+    .input-sm {
+        @apply text-xs p-2;
+    }
+
+    .input-lg {
+        @apply text-base p-3;
+    }
+
+    .input-xl {
+        @apply text-base p-3.5;
+    }
+
+    .input-xxl {
+        @apply text-base p-4;
+    }
+
+    .form-label {
+        @apply block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300;
+        cursor: pointer;
+
+        &.error {
+            @apply text-red-700 dark:text-red-500;
+        }
+
+        &.success {
+            @apply text-green-700 dark:text-green-500;
+        }
+    }
+    .form-control-container {
+        @apply relative;
+    }
+    .has-start-icon {
+        @apply pl-8 rtl:pr-8;
+    }
+    .has-end-icon {
+        @apply pr-8 rtl:pl-8;
+    }
+    /** Form Control **/
+    .form-control,
+    .form-select {
+        @apply form-control-appearance;
+
+        /** Success **/
+        &.success {
+            @apply bg-green-200 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 focus:ring-green-300 focus:border-green-500 dark:bg-gray-700 dark:border-green-500;
+        }
+
+        /** Error **/
+        &.error {
+            @apply bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-300 dark:bg-gray-700 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500;
+        }
+
+        /** Pill **/
+        &.pill {
+            @apply rounded-full;
+        }
+
+        /** Size **/
+        &.xs {
+            @apply input-xs;
+        }
+
+        &.sm {
+            @apply input-sm;
+        }
+
+        &.lg {
+            @apply input-lg;
+        }
+
+        &.xl {
+            @apply input-xl;
+        }
+
+        &.xxl {
+            @apply input-xxl;
+        }
+        &.has-start-icon {
+            @apply ps-8;
+        }
+        &.has-end-icon {
+            @apply pe-8;
+        }
+    }
+
+    .start-icon,
+    .end-icon {
+        @apply absolute inset-y-[1px] flex-space-1 px-2;
+    }
+    .start-icon {
+        @apply start-[1px];
+        @apply rounded-s;
+    }
+    .end-icon {
+        @apply end-[1px];
+        @apply rounded-e;
+    }
+    .password-toggle {
+        @apply cursor-pointer text-gray-600 dark:text-white focus:outline-none;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        &.primary {
+            @apply accent-primary;
+        }
+        &.secondary {
+            @apply accent-secondary;
+        }
+        &.light {
+            @apply accent-light;
+        }
+        &.light {
+            @apply accent-dark;
+        }
+        &.blue {
+            @apply accent-blue;
+        }
+        &.green {
+            @apply accent-green;
+        }
+        &.red {
+            @apply accent-red;
+        }
+        &.yellow {
+            @apply accent-yellow;
+        }
+        &.orange {
+            @apply accent-orange;
+        }
+        &.purple {
+            @apply accent-purple;
+        }
+        &.violet {
+            @apply accent-violet;
+        }
+        &.cyan {
+            @apply accent-cyan;
+        }
+    }
+}

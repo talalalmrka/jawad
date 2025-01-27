@@ -1,0 +1,151 @@
+@layer components {
+    .sidebar-dark {
+        @apply bg-gray-800 divide-gray-700;
+        @apply border-none;
+        .sidebar-brand {
+            @apply text-gray-200 hover:text-white;
+        }
+        .nav-item {
+            .nav-link {
+                @apply text-gray-200 hover:text-white;
+
+                &.active {
+                    @apply text-white bg-secondary/50;
+                }
+            }
+            &.nav-item-collapse {
+                .collapse-link {
+                    @apply text-gray-200 hover:text-white hover:bg-secondary/25;
+                    &.active {
+                        @apply text-white;
+                    }
+                }
+            }
+        }
+        .sidebar-toggle,
+        .sidebar-collapse-link {
+            @apply text-gray-200 hover:text-white;
+        }
+    }
+    .sidebar {
+        @apply text-sm fixed top-0 left-0 rtl:right-0 z-20 shadow;
+        @apply flex flex-col flex-shrink-0 w-64 h-full font-normal;
+        @apply duration-200 ease-in-out transition-transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0;
+        @apply bg-white dark:bg-gray-800;
+        @apply border-e dark:border-none;
+        @apply divide-y divide-gray-200 dark:divide-gray-700; //divide-black/10;
+        @apply text-gray-500 dark:text-gray-200;
+        @apply z-30;
+        &.show {
+            @apply translate-x-0 rtl:translate-x-0;
+        }
+        .sidebar-header {
+            @apply relative;
+        }
+        .sidebar-brand-container {
+            @apply p-1.5 flex items-center justify-between;
+        }
+        .sidebar-brand {
+            @apply font-bold flex items-center space-x-2 rtl:space-x-reverse text-gray-600 hover:text-gray-900;
+        }
+        .sidebar-collapse-link {
+            @apply px-2 text-gray-600 hover:text-gray-900;
+        }
+        .sidebar-toggle {
+            @apply text-gray-500 hover:text-gray-900 rounded-full;
+            @apply lg:hidden;
+        }
+
+        .nav-item {
+            .nav-link {
+                @apply flex px-3 py-2 space-x-3 rtl:space-x-reverse items-center rounded-full;
+                @apply text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white;
+                @apply hover:bg-secondary/25;
+
+                &.active {
+                    @apply font-bold bg-primary-500 text-white;
+                }
+            }
+
+            &.nav-item-collapse {
+                .collapse-link {
+                    @apply flex w-full px-3 py-2 space-x-3 rtl:space-x-reverse items-center text-gray-500 hover:text-gray-900 rounded-full hover:bg-primary-100 dark:text-gray-200 dark:hover:bg-gray-700;
+
+                    &.active {
+                        @apply text-gray-900 dark:text-white;
+                    }
+                }
+            }
+        }
+        &.dark {
+            @apply sidebar-dark;
+        }
+        &.primary {
+            @apply sidebar-dark bg-primary divide-black/10;
+            .nav-item {
+                .nav-link {
+                    &.active {
+                        @apply text-primary bg-white/75;
+                    }
+                }
+            }
+        }
+        &.secondary {
+            @apply sidebar-dark bg-secondary divide-black/10;
+            .nav-item {
+                .nav-link {
+                    &.active {
+                        @apply text-secondary bg-white/75;
+                    }
+                }
+            }
+        }
+        &.violet {
+            @apply sidebar-dark bg-violet divide-black/10;
+            .nav-item {
+                .nav-link {
+                    &.active {
+                        @apply text-violet bg-white/75;
+                    }
+                }
+            }
+        }
+        &.blue {
+            @apply sidebar-dark bg-blue divide-black/10;
+            .nav-item {
+                .nav-link {
+                    &.active {
+                        @apply text-blue bg-white/75;
+                    }
+                }
+            }
+        }
+        .theme-selector {
+            @apply flex items-center justify-center space-x-2 rtl:space-x-reverse pb-3;
+            .theme-selector-btn {
+                @apply w-6 h-6 rounded-full border;
+                &.active {
+                    @apply ring-2 ring-blue-500;
+                }
+                &.light {
+                    @apply bg-light;
+                }
+                &.dark {
+                    @apply bg-dark;
+                }
+                &.primary {
+                    @apply bg-primary;
+                }
+                &.secondary {
+                    @apply bg-secondary;
+                }
+                &.violet {
+                    @apply bg-violet;
+                }
+                &.blue {
+                    @apply bg-blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@layer components {
+    .input-group {
+        @apply relative flex items-center;
+        .input-group-text,
+        .form-control,
+        .form-select,
+        .input-group-text,
+        .btn {
+            @apply shape-form-control;
+            @apply rounded-none;
+            @apply h-full;
+            @apply leading-none;
+            @apply m-0;
+            @apply font-normal;
+            &:first-child {
+                @apply rounded-s-lg;
+            }
+            &:last-child {
+                @apply rounded-e-lg;
+            }
+        }
+        svg {
+            //@apply text-form-control;
+        }
+    }
+}

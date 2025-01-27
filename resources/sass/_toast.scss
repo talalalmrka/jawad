@@ -1,0 +1,95 @@
+@layer components {
+    .toast-container {
+        @apply fixed z-full;
+        @apply top-4 end-4;
+        &.top-start {
+            @apply end-auto top-4 start-4;
+        }
+        &.top-center {
+            @apply end-auto top-4 start-1/2 -translate-x-1/2;
+        }
+        &.bottom-start {
+            @apply top-auto end-auto bottom-4 start-4;
+        }
+        &.bottom-center {
+            @apply top-auto end-auto bottom-4 start-1/2 -translate-x-1/2;
+        }
+        &.bottom-end {
+            @apply top-auto bottom-4 end-4;
+        }
+        &.center-center {
+            @apply top-1/2 start-1/2 -translate-y-1/2 -translate-x-1/2;
+        }
+    }
+    .toast {
+        @apply flex-space-2 p-2.5 mb-3 text-sm rounded-lg;
+        @apply text-cyan-900 bg-cyan;
+        @apply shadow-sm;
+        //sizes
+        &.xxs {
+            @apply flex-space-1;
+            @apply p-1 text-xxs;
+        }
+        &.xs {
+            @apply flex-space-1;
+            @apply p-1.5 text-xxs;
+        }
+        &.sm {
+            @apply flex-space-1;
+            @apply p-2 text-xs;
+        }
+        &.lg {
+            @apply p-3.5 text-lg;
+        }
+        &.xl {
+            @apply p-4 text-xl;
+        }
+        &.xxl {
+            @apply p-5 text-2xl;
+        }
+        &.toast-primary {
+            @apply bg-primary text-bg-primary;
+        }
+        &.toast-secondary {
+            @apply bg-secondary text-bg-secondary;
+        }
+        &.toast-light {
+            @apply bg-light text-bg-light;
+        }
+        &.toast-dark {
+            @apply bg-dark text-bg-dark;
+        }
+        &.toast-info,
+        &.toast-cyan {
+            @apply bg-cyan text-bg-cyan;
+        }
+        &.toast-success,
+        &.toast-green {
+            @apply bg-green text-bg-green;
+        }
+        &.toast-danger,
+        &.toast-error,
+        &.toast-red {
+            @apply bg-red text-bg-red;
+        }
+        &.toast-warning,
+        &.toast-orange {
+            @apply bg-orange text-bg-orange;
+        }
+        &.toast-blue {
+            @apply bg-blue text-bg-blue;
+        }
+        &.toast-yellow {
+            @apply bg-yellow text-bg-yellow;
+        }
+        &.toast-purple {
+            @apply bg-purple text-bg-purple;
+        }
+        &.toast-violet {
+            @apply bg-violet text-bg-violet;
+        }
+        .btn-close {
+            @apply text-inherit;
+        }
+    }
+}

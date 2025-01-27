@@ -1,0 +1,23 @@
+.list-group {
+    @apply rounded-lg border border-gray-300 shadow-sm;
+
+    .list-group-item {
+        @apply block px-4 py-2 text-gray-700 bg-white border-b border-gray-200 transition-colors duration-200;
+
+        &:hover {
+            @apply bg-gray-100;
+        }
+
+        &:last-child {
+            @apply border-b-0 rounded-b-lg;
+        }
+
+        &:first-child {
+            @apply rounded-t-lg;
+        }
+
+        &.active {
+            @apply bg-blue-500 text-white;
+        }
+    }
+}

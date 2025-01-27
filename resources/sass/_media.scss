@@ -1,0 +1,17 @@
+.media-item-preview {
+    @apply relative flex items-center justify-center shadow-xs hover:shadow-sm text-gray-500 dark:text-gray-400 bg-gray-100 hover:bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden;
+    img {
+        @apply max-w-full max-h-full;
+    }
+    video {
+        @apply w-full max-h-full;
+    }
+    .media-item-delete {
+        @apply hidden opacity-0 bg-red-500 bg-opacity-85 hover:bg-opacity-95 text-white p-1 rounded-full transition duration-700 ease-in-out absolute top-0 start-0 mt-1.5 ms-1.5 z-40;
+    }
+    &:hover {
+        .media-item-delete {
+            @apply block opacity-100;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@layer components {
+    .rating-bar {
+        @apply flex-space-1;
+        svg {
+            @apply text-gray-300 dark:text-gray-300;
+            &.active {
+                @apply text-orange dark:text-orange;
+            }
+        }
+    }
+}

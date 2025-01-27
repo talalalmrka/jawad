@@ -1,0 +1,51 @@
+.accordion {
+    @apply rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply overflow-hidden;
+    .accordion-item {
+        @apply border-b;
+        //@apply border border-gray-200 dark:border-gray-700;
+        @apply rounded-none;
+
+        &:first-child {
+            @apply rounded-t-lg;
+        }
+
+        &:last-child {
+            @apply border-b-0;
+            @apply rounded-b-lg;
+        }
+        .accordion-item-header {
+            @apply flex items-center px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-white;
+            .accordion-item-title {
+                @apply grow mb-0;
+            }
+        }
+        .accordion-toggle {
+            @apply flex items-center justify-center;
+            &::after {
+                content: "";
+                display: inline-block;
+                @apply w-2.5 h-2.5;
+                @apply border-e-[1.5px] border-b-[1.5px];
+                @apply border-gray-700 dark:border-gray-200;
+                @apply rotate-45 transition-transform;
+            }
+        }
+        .accordion-item-body {
+            @apply p-3 text-gray-700 dark:text-gray-300;
+            //@apply border-t border-gray-200 dark:border-gray-700;
+            @apply hidden;
+        }
+        &.open {
+            .accordion-item-body {
+                @apply block;
+            }
+            .accordion-toggle {
+                &::after {
+                    @apply rotate-[-135deg];
+                }
+            }
+        }
+    }
+}

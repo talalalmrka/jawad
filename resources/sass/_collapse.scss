@@ -1,0 +1,28 @@
+@layer components {
+    .collapse-toggle {
+        @apply flex items-center justify-between;
+        cursor: pointer;
+
+        // Add chevron icon
+        &::after {
+            content: "";
+            @apply ml-2 w-2.5 h-2.5;
+            border: solid currentColor;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            transform: rotate(45deg); // Chevron down
+            transition: transform 0.2s ease-in-out;
+        }
+
+        // Rotate chevron when dropdown is open
+        &.open::after {
+            transform: rotate(-135deg); // Chevron up
+        }
+    }
+    .collapse-chevron {
+        @apply transition-transform duration-300 rtl:rotate-180;
+        &.open {
+            @apply rotate-90 rtl:rotate-90;
+        }
+    }
+}

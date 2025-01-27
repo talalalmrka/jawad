@@ -1,0 +1,99 @@
+@layer components {
+    .alert {
+        @apply flex-space-2 p-3 mb-3 text-sm rounded-lg;
+        @apply text-cyan-800 bg-cyan-50 dark:bg-gray-800 dark:text-cyan-400;
+        &.bordered {
+            @apply border-blue-300;
+        }
+        //sizes
+        &.xxs {
+            @apply p-1.5 text-xxs;
+        }
+        &.xs {
+            @apply p-2 text-xxs;
+        }
+        &.sm {
+            @apply p-2.5 text-xs;
+        }
+        &.lg {
+            @apply p-3.5 text-lg;
+        }
+        &.xl {
+            @apply p-4 text-xl;
+        }
+        &.xxl {
+            @apply p-5 text-2xl;
+        }
+        &.alert-primary {
+            @apply text-primary-800 bg-primary-50 dark:text-primary-400;
+            &.bordered {
+                @apply border-primary-300;
+            }
+        }
+        &.alert-secondary {
+            @apply text-secondary-800 bg-secondary-50 dark:text-secondary-400;
+            &.bordered {
+                @apply border-secondary-300;
+            }
+        }
+        &.alert-dark {
+            @apply text-dark-800 bg-dark-50 dark:text-dark-400;
+            &.bordered {
+                @apply border-dark-300;
+            }
+        }
+        &.alert-info,
+        &.alert-cyan {
+            @apply text-cyan-800 bg-cyan-50 dark:text-cyan-400;
+            &.bordered {
+                @apply border-cyan-300;
+            }
+        }
+        &.alert-success,
+        &.alert-green {
+            @apply text-green-800 bg-green-50 dark:text-green-400;
+            &.bordered {
+                @apply border-green-300;
+            }
+        }
+        &.alert-danger,
+        &.alert-error,
+        &.alert-red {
+            @apply text-red-800 bg-red-50 dark:text-red-400;
+            &.bordered {
+                @apply border-red-300;
+            }
+        }
+        &.alert-warning,
+        &.alert-orange {
+            @apply text-orange-800 bg-orange-50 dark:text-orange-400;
+            &.bordered {
+                @apply border-orange-300;
+            }
+        }
+        &.alert-blue {
+            @apply text-blue-800 bg-blue-50 dark:text-blue-400;
+            &.bordered {
+                @apply border-blue-300;
+            }
+        }
+        &.alert-yellow {
+            @apply text-yellow-800 bg-yellow-50 dark:text-yellow-400;
+            &.bordered {
+                @apply border-yellow-300;
+            }
+        }
+        &.alert-purple {
+            @apply text-purple-800 bg-purple-50 dark:text-purple-400;
+            &.bordered {
+                @apply border-purple-300;
+            }
+        }
+        &.alert-violet {
+            @apply text-violet-800 bg-violet-50 dark:text-violet-400;
+            &.bordered {
+                @apply border-violet-300;
+            }
+        }
+    }
+}

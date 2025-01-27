@@ -1,0 +1,143 @@
+@layer components {
+    .badge {
+        @apply text-xs font-medium px-2.5 py-0.5 rounded;
+
+        &.xs {
+            @apply font-extralight px-1 py-0;
+        }
+
+        &.sm {
+            @apply font-light px-1.5 py-0.5;
+        }
+
+        &.lg {
+            @apply text-sm font-medium;
+        }
+
+        &.xl {
+            @apply text-base font-medium;
+        }
+
+        &.xl {
+            @apply text-base font-medium px-3 py-1;
+        }
+
+        &.xxl {
+            @apply text-lg font-medium px-4 py-1.5;
+        }
+
+        &.pill {
+            @apply rounded-full;
+        }
+
+        &.outline {
+            @apply border outline-none;
+        }
+
+        &.primary {
+            @apply bg-primary-200 text-primary-800 dark:bg-primary-900 dark:text-primary-300;
+
+            &.outline {
+                @apply border-primary-400;
+            }
+        }
+
+        &.secondary {
+            @apply bg-secondary-200 text-secondary-800 dark:bg-secondary-900 dark:text-secondary-300;
+
+            &.outline {
+                @apply border-secondary-400;
+            }
+        }
+
+        &.light {
+            @apply bg-light-200 text-light-800 dark:bg-light-900 dark:text-light-300;
+
+            &.outline {
+                @apply border-light-400;
+            }
+        }
+
+        &.dark {
+            @apply bg-dark-200 text-dark-800 dark:bg-dark-900 dark:text-dark-300;
+
+            &.outline {
+                @apply border-dark-400;
+            }
+        }
+
+        &.blue {
+            @apply bg-blue-200 text-blue-800 dark:bg-blue-900 dark:text-blue-300;
+
+            &.outline {
+                @apply border-blue-400;
+            }
+        }
+
+        &.green {
+            @apply bg-green-200 text-green-800 dark:bg-green-900 dark:text-green-300;
+
+            &.outline {
+                @apply border-green-400;
+            }
+        }
+
+        &.red {
+            @apply bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-300;
+
+            &.outline {
+                @apply border-red-400;
+            }
+        }
+
+        &.orange {
+            @apply bg-orange-200 text-orange-800 dark:bg-orange-900 dark:text-orange-300;
+
+            &.outline {
+                @apply border-orange-400;
+            }
+        }
+
+        &.yellow {
+            @apply bg-yellow-200 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300;
+
+            &.outline {
+                @apply border-yellow-400;
+            }
+        }
+
+        &.purple {
+            @apply bg-purple-200 text-purple-800 dark:bg-purple-900 dark:text-purple-300;
+
+            &.outline {
+                @apply border-purple-400;
+            }
+        }
+
+        &.violet {
+            @apply bg-violet-200 text-violet-800 dark:bg-violet-900 dark:text-violet-300;
+
+            &.outline {
+                @apply border-violet-400;
+            }
+        }
+
+        &.cyan {
+            @apply bg-cyan-200 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300;
+
+            &.outline {
+                @apply border-cyan-400;
+            }
+        }
+        &.notification {
+            @apply absolute inline-flex items-center justify-center text-xxs w-5 h-5 font-bold text-white bg-red-500 border-1 border-white rounded-full -top-1.5 -end-1.5 dark:border-gray-900;
+        }
+        &.chip {
+            @apply bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-light-300;
+            @apply cursor-pointer;
+            &.active {
+                @apply bg-blue-600 dark:bg-blue-800 text-white dark:text-white;
+            }
+        }
+    }
+}

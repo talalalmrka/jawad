@@ -1,0 +1,47 @@
+@layer components {
+    .header {
+        @apply z-20 bg-white dark:bg-gray-700 sticky top-0 shadow-sm;
+        /*&.sticky {
+            @apply sticky top-0 shadow-sm;
+        }
+        &.fixed {
+            @apply fixed top-0 start-0 end-0;
+        }*/
+        &.primary {
+            @apply bg-primary;
+        }
+        &.secondary {
+            @apply bg-secondary;
+        }
+        &.light {
+            @apply bg-light dark:bg-gray-700;
+        }
+        &.dark {
+            @apply bg-dark;
+        }
+        &.blue {
+            @apply bg-blue;
+        }
+        &.green {
+            @apply bg-green;
+        }
+        &.red {
+            @apply bg-red;
+        }
+        &.orange {
+            @apply bg-orange;
+        }
+        &.yellow {
+            @apply bg-yellow;
+        }
+        &.purple {
+            @apply bg-purple;
+        }
+        &.violet {
+            @apply bg-violet;
+        }
+        &.cyan {
+            @apply bg-cyan;
+        }
+    }
+}
