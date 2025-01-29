@@ -27,24 +27,11 @@ This project is a simple blog application built with Laravel. It is designed to 
     composer install
     npm install
     ```
-4. Copy the `.env.example` file to `.env`:
+4. Run the database migrations:
     ```sh
-    cp .env.example .env
+    php artisan migrate:fresh --seed
     ```
-5. Generate the application key:
-    ```sh
-    php artisan key:generate
-    ```
-6. Set up your database configuration in the `.env` file.
-7. Run the database migrations:
-    ```sh
-    php artisan migrate
-    ```
-8. Seed the database with sample data:
-    ```sh
-    php artisan db:seed
-    ```
-9. Start the development server:
+5. Start the development server:
     ```sh
     php artisan serve
     npm run dev
