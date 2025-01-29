@@ -35,6 +35,9 @@ new class extends Component {
                     <x-nav-link :href="route('dashboard.users')" :active="request()->routeIs('dashboard.users')" wire:navigate>
                         {{ __('Users') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('dashboard.permissions')" :active="request()->routeIs('dashboard.permissions')" wire:navigate>
+                        {{ __('Permissions') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('dashboard.posts')" :active="request()->routeIs('dashboard.posts')" wire:navigate>
                         {{ __('Posts') }}
                     </x-nav-link>
@@ -100,6 +103,9 @@ new class extends Component {
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard.users')" :active="request()->routeIs('dashboard.users')" wire:navigate>
                 {{ __('Users') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('dashboard.permissions')" :active="request()->routeIs('dashboard.permissions')" wire:navigate>
+                {{ __('Permissions') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard.posts')" :active="request()->routeIs('dashboard.posts')" wire:navigate>
                 {{ __('Posts') }}

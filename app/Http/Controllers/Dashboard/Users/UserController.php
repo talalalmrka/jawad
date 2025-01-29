@@ -63,6 +63,30 @@ class UserController extends Controller
             ]);
         }
     }
+    public function action(Request $request)
+    {
+        $validated = $request->validate([
+            'action' => ['required', 'string', Rule::in(['delete'])],
+            'items' => ['required', 'array'],
+            'items.*' => ['required', 'integer', Rule::exists('users', 'id')],
+        ]);
+
+        //dd($validated);
+        $action = data_get($validated, 'action');
+        $items = data_get($validated, 'items', []);
+        if ($action == 'delete') {
+            $delete = User::destroy($items);
+            if ($delete) {
+                return back()->with('status', __('Users deleted'));
+            } else {
+                return back()->withErrors([
+                    'status' => __('Delete Users failed'),
+                ]);
+            }
+        } else {
+            return back()->withErrors(['status' => __('Action not supported')]);
+        }
+    }
     public function delete(User $user)
     {
         $delete = $user->delete();

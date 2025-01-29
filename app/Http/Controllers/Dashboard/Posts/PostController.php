@@ -74,6 +74,32 @@ class PostController extends Controller
             ]);
         }
     }
+    public function deleteSelected($ids)
+    {
+
+    }
+    public function action(Request $request)
+    {
+        $validated = $request->validate([
+            'action' => ['required', 'string', Rule::in(['delete'])],
+            'items' => ['required', 'array'],
+            'items.*' => ['required', 'integer', Rule::exists('posts', 'id')],
+        ]);
+        $action = data_get($validated, 'action');
+        $items = data_get($validated, 'items', []);
+        if ($action == 'delete') {
+            $delete = Post::destroy($items);
+            if ($delete) {
+                return back()->with('status', __('Posts deleted'));
+            } else {
+                return back()->withErrors([
+                    'status' => __('Delete posts failed'),
+                ]);
+            }
+        } else {
+            return back()->withErrors(['status' => __('Action not supported')]);
+        }
+    }
     public function delete(Post $post)
     {
         $delete = $post->delete();

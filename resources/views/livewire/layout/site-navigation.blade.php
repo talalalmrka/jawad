@@ -71,10 +71,10 @@ new class extends Component {
                     <x-slot name="content">
                         @guest
                             <x-dropdown-link :href="route('login')" wire:navigate>
-                                {{ __('Login') }}
+                                {{ __('Sign in') }}
                             </x-dropdown-link>
                             <x-dropdown-link :href="route('register')" wire:navigate>
-                                {{ __('Sign in') }}
+                                {{ __('Register') }}
                             </x-dropdown-link>
                         @endguest
                         @auth
@@ -137,7 +137,7 @@ new class extends Component {
             <div class="mt-3 space-y-1">
                 @guest
                     <x-responsive-nav-link :href="route('login')" wire:navigate>
-                        {{ __('Login') }}
+                        {{ __('Sign in') }}
                     </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('register')" wire:navigate>
                         {{ __('Register') }}
