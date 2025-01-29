@@ -6,7 +6,7 @@ This project is a simple blog application built with Laravel. It is designed to 
 
 ## Features
 
-- User authentication and registration
+- User authentication and registration and roles and permissions
 - Create, read, update, and delete blog posts
 - Comment on blog posts
 - User profiles
